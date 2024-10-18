@@ -1,0 +1,28 @@
+{
+    "artifactsDir": "./generated-artifacts",
+    "contractsDir": "./contracts",
+    "useDockerisedSolc": true,
+    "compilerSettings": {
+        "optimizer": { "enabled": true, "runs": 1000000 },
+        "outputSelection": {
+            "*": {
+                "*": [
+                    "abi",
+                    "evm.bytecode.object",
+                    "evm.bytecode.sourceMap",
+                    "evm.deployedBytecode.object",
+                    "evm.deployedBytecode.sourceMap"
+                ]
+            }
+        }
+    },
+    "contracts": [
+        "src/LibBytes.sol",
+        "src/Ownable.sol",
+        "src/ReentrancyGuard.sol",
+        "src/SafeMath.sol",
+        "src/interfaces/IOwnable.sol",
+        "test/TestConstants.sol",
+        "test/TestLibBytes.sol"
+    ]
+}
