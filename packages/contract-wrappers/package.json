@@ -1,0 +1,67 @@
+{
+    "name": "@0x/contract-wrappers",
+    "version": "12.2.0-beta.3",
+    "engines": {
+        "node": ">=6.12"
+    },
+    "description": "Wrappers for 0x smart contract wrappers generated using @0x/abi-gen",
+    "keywords": [
+        "0xproject",
+        "ethereum",
+        "tokens",
+        "exchange"
+    ],
+    "main": "lib/src/index.js",
+    "types": "lib/src/index.d.ts",
+    "scripts": {
+        "build": "tsc -b",
+        "rebuild": "yarn wrappers:clean && yarn wrappers:generate && yarn wrappers:prettier && yarn build",
+        "build:ci": "yarn build",
+        "lint": "tslint --format stylish --project . --exclude **/lib/**/*",
+        "fix": "tslint --fix --format stylish --project .--exclude **/lib/**/*",
+        "prettier": "prettier --write **/* --config ../../.prettierrc",
+        "clean": "shx rm -rf lib generated_docs",
+        "docs_test": "typedoc --excludePrivate --excludeExternals --target ES5 --tsconfig typedoc-tsconfig.json --out generated_docs ./src/generated-wrappers/*",
+        "diff_docs": "git diff --exit-code ./docs",
+        "s3:sync_md_docs": "aws s3 sync ./docs s3://docs-markdown/${npm_package_name}/v${npm_package_version} --profile 0xproject --region us-east-1 --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers",
+        "docs:md": "ts-doc-gen --sourceDir='$PROJECT_FILES' --output=$MD_FILE_DIR --fileExtension=mdx --tsconfig=./typedoc-tsconfig.json",
+        "docs:json": "typedoc --excludePrivate --excludeExternals --excludeProtected --ignoreCompilerErrors --target ES5 --tsconfig typedoc-tsconfig.json --json $JSON_FILE_PATH $PROJECT_FILES",
+        "wrappers:prettier": "prettier --write src/generated-wrappers/* --config ../../.prettierrc",
+        "wrappers:clean": "rm -rf src/generated-wrappers",
+        "wrappers:generate": "abi-gen --abis  ${npm_package_config_abis} --output src/generated-wrappers --backend ethers"
+    },
+    "config": {
+        "abis": "../contract-artifacts/artifacts/@(DevUtils|ERC20Token|ERC721Token|Exchange|Forwarder|WETH9|Coordinator|Staking|StakingProxy).json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/0xProject/0x-monorepo.git"
+    },
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/0xProject/0x-monorepo/issues"
+    },
+    "homepage": "https://github.com/0xProject/0x-monorepo/packages/contract-wrappers/README.md",
+    "devDependencies": {
+        "@0x/ts-doc-gen": "^0.0.22",
+        "@0x/tslint-config": "^3.1.0-beta.2",
+        "tslint": "5.11.0",
+        "typedoc": "^0.15.0",
+        "typescript": "3.0.1"
+    },
+    "dependencies": {
+        "@0x/assert": "^2.2.0-beta.2",
+        "@0x/base-contract": "^5.5.0-beta.3",
+        "@0x/contract-addresses": "^3.3.0-beta.4",
+        "@0x/contract-artifacts": "^2.3.0-beta.3",
+        "@0x/json-schemas": "^4.1.0-beta.2",
+        "@0x/types": "^2.5.0-beta.2",
+        "@0x/utils": "^4.6.0-beta.2",
+        "@0x/web3-wrapper": "^6.1.0-beta.2",
+        "ethereum-types": "^2.2.0-beta.2",
+        "ethers": "~4.0.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
