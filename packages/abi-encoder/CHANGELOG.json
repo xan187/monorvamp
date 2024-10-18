@@ -1,0 +1,11 @@
+[
+    {
+        "version": "1.0.0",
+        "changes": [
+            {
+                "note": "Initial release as an independent package. For previous entries see @0x/utils",
+                "pr": 1504
+            }
+        ]
+    }
+]
