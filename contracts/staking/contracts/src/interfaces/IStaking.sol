@@ -1,0 +1,57 @@
+/*
+
+  Copyright 2019 ZeroEx Intl.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+*/
+
+pragma solidity ^0.5.9;
+
+
+interface IStaking {
+
+    /// @dev Pays several protocols fee in ETH.
+    /// @param makers The addresses of the order makers.
+    /// @param fees The fee amounts paid by each of the makers.
+    function batchPayProtocolFees(
+        address[] calldata makers,
+        uint256[] calldata fees
+    )
+        external
+        payable;
+
+    /// @dev Pays a protocol fee in ETH.
+    /// @param makerAddress The address of the order's maker.
+    function payProtocolFee(address makerAddress)
+        external
+        payable;
+
+    /// @dev Records several protocol fees that were paid in WETH.
+    /// @param makers The addresses of the order makers.
+    /// @param fees The fee amounts paid by each of the makers.
+    function batchRecordProtocolFees(
+        address[] calldata makers,
+        uint256[] calldata fees
+    )
+        external;
+
+    /// @dev Records a protocol fee that was paid in WETH.
+    /// @param makerAddress The address of the order's maker.
+    /// @param fee The fee amount that was paid by the maker.
+    function recordProtocolFee(
+        address makerAddress,
+        uint256 fee
+    )
+        external;
+}
