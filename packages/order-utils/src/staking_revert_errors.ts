@@ -1,0 +1,208 @@
+import { BigNumber, RevertError } from '@0x/utils';
+
+// tslint:disable:max-classes-per-file
+
+export enum MakerPoolAssignmentErrorCodes {
+    MakerAddressAlreadyRegistered,
+    MakerAddressNotRegistered,
+    MakerAddressNotPendingAdd,
+    PoolIsFull,
+}
+
+export class MiscalculatedRewardsError extends RevertError {
+    constructor(totalRewardsPaid?: BigNumber | number | string, initialContractBalance?: BigNumber | number | string) {
+        super(
+            'MiscalculatedRewardsError',
+            'MiscalculatedRewardsError(uint256 totalRewardsPaid, uint256 initialContractBalance)',
+            { totalRewardsPaid, initialContractBalance },
+        );
+    }
+}
+
+export class OnlyCallableByExchangeError extends RevertError {
+    constructor(senderAddress?: string) {
+        super('OnlyCallableByExchangeError', 'OnlyCallableByExchangeError(address senderAddress)', { senderAddress });
+    }
+}
+
+export class ExchangeAddressAlreadyRegisteredError extends RevertError {
+    constructor(exchangeAddress?: string) {
+        super(
+            'ExchangeAddressAlreadyRegisteredError',
+            'ExchangeAddressAlreadyRegisteredError(address exchangeAddress)',
+            { exchangeAddress },
+        );
+    }
+}
+
+export class ExchangeAddressNotRegisteredError extends RevertError {
+    constructor(exchangeAddress?: string) {
+        super('ExchangeAddressNotRegisteredError', 'ExchangeAddressNotRegisteredError(address exchangeAddress)', {
+            exchangeAddress,
+        });
+    }
+}
+
+export class InsufficientBalanceError extends RevertError {
+    constructor(amount?: BigNumber | number | string, balance?: BigNumber | number | string) {
+        super('InsufficientBalanceError', 'InsufficientBalanceError(uint256 amount, uint256 balance)', {
+            amount,
+            balance,
+        });
+    }
+}
+
+export class OnlyCallableByPoolOperatorError extends RevertError {
+    constructor(senderAddress?: string, poolOperatorAddress?: string) {
+        super(
+            'OnlyCallableByPoolOperatorError',
+            'OnlyCallableByPoolOperatorError(address senderAddress, address poolOperatorAddress)',
+            { senderAddress, poolOperatorAddress },
+        );
+    }
+}
+
+export class OnlyCallableByPoolOperatorOrMakerError extends RevertError {
+    constructor(senderAddress?: string, poolOperatorAddress?: string, makerAddress?: string) {
+        super(
+            'OnlyCallableByPoolOperatorOrMakerError',
+            'OnlyCallableByPoolOperatorOrMakerError(address senderAddress, address poolOperatorAddress, address makerAddress)',
+            { senderAddress, poolOperatorAddress, makerAddress },
+        );
+    }
+}
+
+export class MakerPoolAssignmentError extends RevertError {
+    constructor(error?: MakerPoolAssignmentErrorCodes, makerAddress?: string, poolId?: string) {
+        super(
+            'MakerPoolAssignmentError',
+            'MakerPoolAssignmentError(uint8 error, address makerAddress, bytes32 poolId)',
+            {
+                error,
+                makerAddress,
+                poolId,
+            },
+        );
+    }
+}
+
+export class WithdrawAmountExceedsMemberBalanceError extends RevertError {
+    constructor(withdrawAmount?: BigNumber | number | string, balance?: BigNumber | number | string) {
+        super(
+            'WithdrawAmountExceedsMemberBalanceError',
+            'WithdrawAmountExceedsMemberBalanceError(uint256 withdrawAmount, uint256 balance)',
+            { withdrawAmount, balance },
+        );
+    }
+}
+
+export class BlockTimestampTooLowError extends RevertError {
+    constructor(epochEndTime?: BigNumber | number | string, currentBlockTimestamp?: BigNumber | number | string) {
+        super(
+            'BlockTimestampTooLowError',
+            'BlockTimestampTooLowError(uint256 epochEndTime, uint256 currentBlockTimestamp)',
+            { epochEndTime, currentBlockTimestamp },
+        );
+    }
+}
+
+export class OnlyCallableByStakingContractError extends RevertError {
+    constructor(senderAddress?: string) {
+        super('OnlyCallableByStakingContractError', 'OnlyCallableByStakingContractError(address senderAddress)', {
+            senderAddress,
+        });
+    }
+}
+
+export class OnlyCallableIfInCatastrophicFailureError extends RevertError {
+    constructor() {
+        super('OnlyCallableIfInCatastrophicFailureError', 'OnlyCallableIfInCatastrophicFailureError()', {});
+    }
+}
+
+export class OnlyCallableIfNotInCatastrophicFailureError extends RevertError {
+    constructor() {
+        super('OnlyCallableIfNotInCatastrophicFailureError', 'OnlyCallableIfNotInCatastrophicFailureError()', {});
+    }
+}
+
+export class AmountExceedsBalanceOfPoolError extends RevertError {
+    constructor(amount?: BigNumber | number | string, poolBalance?: BigNumber | number | string) {
+        super(
+            'AmountExceedsBalanceOfPoolError',
+            'AmountExceedsBalanceOfPoolError(uint256 amount, uint96 poolBalance)',
+            { amount, poolBalance },
+        );
+    }
+}
+
+export class InvalidPoolOperatorShareError extends RevertError {
+    constructor(poolId?: string, poolOperatorShare?: BigNumber | number | string) {
+        super(
+            'InvalidPoolOperatorShareError',
+            'InvalidPoolOperatorShareError(bytes32 poolId, uint32 poolOperatorShare)',
+            { poolId, poolOperatorShare },
+        );
+    }
+}
+
+export class PoolAlreadyExistsError extends RevertError {
+    constructor(poolId?: string) {
+        super('PoolAlreadyExistsError', 'PoolAlreadyExistsError(bytes32 poolId)', { poolId });
+    }
+}
+
+export class InvalidCobbDouglasAlphaError extends RevertError {
+    constructor(numerator: BigNumber | number | string, denominator: BigNumber | number | string) {
+        super('InvalidCobbDouglasAlphaError', 'InvalidCobbDouglasAlphaError(uint256 numerator, uint256 denominator)', {
+            numerator,
+            denominator,
+        });
+    }
+}
+
+export class EthVaultNotSetError extends RevertError {
+    constructor() {
+        super('EthVaultNotSetError', 'EthVaultNotSetError()');
+    }
+}
+
+export class RewardVaultNotSetError extends RevertError {
+    constructor() {
+        super('RewardVaultNotSetError', 'RewardVaultNotSetError()');
+    }
+}
+
+export class InvalidStakeStatusError extends RevertError {
+    constructor(status?: BigNumber) {
+        super('InvalidStakeStatusError', 'InvalidStakeStatusError(uint256 status)', { status });
+    }
+}
+
+const types = [
+    MiscalculatedRewardsError,
+    OnlyCallableByExchangeError,
+    ExchangeAddressAlreadyRegisteredError,
+    ExchangeAddressNotRegisteredError,
+    InsufficientBalanceError,
+    OnlyCallableByPoolOperatorError,
+    OnlyCallableByPoolOperatorOrMakerError,
+    MakerPoolAssignmentError,
+    WithdrawAmountExceedsMemberBalanceError,
+    BlockTimestampTooLowError,
+    OnlyCallableByStakingContractError,
+    OnlyCallableIfInCatastrophicFailureError,
+    OnlyCallableIfNotInCatastrophicFailureError,
+    AmountExceedsBalanceOfPoolError,
+    InvalidPoolOperatorShareError,
+    PoolAlreadyExistsError,
+    InvalidCobbDouglasAlphaError,
+    EthVaultNotSetError,
+    RewardVaultNotSetError,
+    InvalidStakeStatusError,
+];
+
+// Register the types we've defined.
+for (const type of types) {
+    RevertError.registerType(type);
+}
