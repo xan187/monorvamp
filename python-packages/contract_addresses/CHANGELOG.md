@@ -1,0 +1,24 @@
+# Changelog
+
+## 3.1.0 - 2020-06-27
+
+-   Updated existing addresses and added new ones. For full details see https://gist.github.com/feuGeneA/7546705fe8e620fb8e51021e1f5a14f4 .
+
+## 3.0.0 - 2019-12-03
+
+-   Addresses are now indexed by chain ID rather than by network ID.
+
+## 2.2.0 - 2019-08-08
+
+-   Added ERC1155Proxy address
+-   Updated addresses for AssetProxyOwner, Coordinator, CoordinatorRegistry, Forwarder, and OrderValidator.
+
+## 2.1.0 - 2019-07-15
+
+-   Added Coordinator and CoordinatorRegistry addresses.
+-   Expanded documentation.
+-   Redeployed Mainnet V2.1 Exchange et al
+
+## 2.0.1 - 2019-02-25
+
+-   Updated addresses of OrderValidator and Forwarder contracts.
