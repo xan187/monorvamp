@@ -1,0 +1,46 @@
+[
+    {
+        "version": "0.2.0",
+        "changes": [
+            {
+                "note": "Export migration tools",
+                "pr": 2612
+            },
+            {
+                "note": "Export `AffiliateFeeTransformerContract`",
+                "pr": 2622
+            },
+            {
+                "note": "Add `MetaTransactions` and `SignatureValidator` features",
+                "pr": 2610
+            }
+        ],
+        "timestamp": 1594788383
+    },
+    {
+        "timestamp": 1592969527,
+        "version": "0.1.1",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ]
+    },
+    {
+        "version": "0.1.0",
+        "changes": [
+            {
+                "note": "Create this package",
+                "pr": 2540
+            },
+            {
+                "note": "Introduce fill `TransformERC20` feature.",
+                "pr": 2545
+            },
+            {
+                "note": "Fill Bridges directly in `FillQuoteTransformer`.",
+                "pr": 2608
+            }
+        ]
+    }
+]
