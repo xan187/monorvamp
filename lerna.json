@@ -1,0 +1,13 @@
+{
+    "lerna": "3.0.0-beta.14",
+    "packages": ["packages/*"],
+    "version": "independent",
+    "commands": {
+        "publish": {
+            "registry": "http://localhost:4873/",
+            "ignore": ["test/**/*", "*.md", "scripts", "lib", "tslint.json", "tsconfig.json"]
+        }
+    },
+    "npmClient": "yarn",
+    "useWorkspaces": true
+}
