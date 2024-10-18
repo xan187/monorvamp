@@ -1,0 +1,50 @@
+{
+    "artifactsDir": "../migrations/artifacts/2.0.0",
+    "contractsDir": "src/contracts",
+    "compilerSettings": {
+        "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+        },
+        "outputSelection": {
+            "*": {
+                "*": [
+                    "abi",
+                    "evm.bytecode.object",
+                    "evm.bytecode.sourceMap",
+                    "evm.deployedBytecode.object",
+                    "evm.deployedBytecode.sourceMap"
+                ]
+            }
+        }
+    },
+    "contracts": [
+        "AssetProxyOwner",
+        "DummyERC20Token",
+        "DummyERC721Receiver",
+        "DummyERC721Token",
+        "ERC20Proxy",
+        "ERC20Token",
+        "ERC721Proxy",
+        "Exchange",
+        "ExchangeWrapper",
+        "IAssetData",
+        "IAssetProxy",
+        "IValidator",
+        "IWallet",
+        "MixinAuthorizable",
+        "MultiSigWallet",
+        "MultiSigWalletWithTimeLock",
+        "TestAssetProxyOwner",
+        "TestAssetProxyDispatcher",
+        "TestLibBytes",
+        "TestLibs",
+        "TestSignatureValidator",
+        "TestValidator",
+        "TestWallet",
+        "TokenRegistry",
+        "Whitelist",
+        "WETH9",
+        "ZRXToken"
+    ]
+}
