@@ -1,0 +1,9 @@
+black
+eth_utils
+hexbytes
+mypy
+mypy_extensions
+pylint
+web3
+../../python-packages/contract_wrappers
+aiohttp>=3.9.0 # not directly required, pinned by Snyk to avoid a vulnerability
