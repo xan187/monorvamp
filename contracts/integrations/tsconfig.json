@@ -1,0 +1,16 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": { "outDir": "lib", "rootDir": ".", "resolveJsonModule": true },
+    "include": ["./src/**/*", "./test/**/*", "./generated-wrappers/**/*"],
+    "files": [
+        "generated-artifacts/AdvancedTokenInteract.json",
+        "generated-artifacts/ExchangeReader.json",
+        "generated-artifacts/ExchangeWrapper.json",
+        "generated-artifacts/GeneralERC20.json",
+        "generated-artifacts/MathHelpers.json",
+        "generated-artifacts/SafeMath.json",
+        "generated-artifacts/TokenInteract.json",
+        "generated-artifacts/ZeroExV3ExchangeWrapper.json",
+        "generated-artifacts/ZeroExV3MultiOrderExchangeWrapper.json"
+    ]
+}
