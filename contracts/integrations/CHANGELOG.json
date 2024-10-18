@@ -1,0 +1,42 @@
+[
+    {
+        "version": "1.0.3-beta.1",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ],
+        "timestamp": 1574238768
+    },
+    {
+        "timestamp": 1574030254,
+        "version": "1.0.2",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ]
+    },
+    {
+        "timestamp": 1573159180,
+        "version": "1.0.1",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "changes": [
+            {
+                "note": "Created package",
+                "pr": "2240"
+            },
+            {
+                "note": "Added the deployment manager class",
+                "pr": "2240"
+            }
+        ]
+    }
+]
