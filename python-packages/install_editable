@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+./parallel pip install -e .[dev]
