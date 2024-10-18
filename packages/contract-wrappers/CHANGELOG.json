@@ -1,0 +1,47 @@
+[
+    {
+        "version": "0.0.6",
+        "changes": [
+            {
+                "note": "Update blockstream to v5.0 and propogate up caught errors to active subscriptions"
+            }
+        ]
+    },
+    {
+        "timestamp": 1529397769,
+        "version": "0.0.5",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ]
+    },
+    {
+        "timestamp": 1527617227,
+        "version": "0.0.4",
+        "changes": [
+            {
+                "note": "Expose 'abi' ContractAbi property on all contract wrappers"
+            }
+        ]
+    },
+    {
+        "version": "0.0.2",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ],
+        "timestamp": 1527008544
+    },
+    {
+        "timestamp": 1527008270,
+        "version": "0.0.1",
+        "changes": [
+            {
+                "note": "Moved contractWrappers out of 0x.js",
+                "pr": 579
+            }
+        ]
+    }
+]
