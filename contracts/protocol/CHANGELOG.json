@@ -1,0 +1,20 @@
+[
+    {
+        "version": "2.2.0",
+        "changes": [
+            {
+                "note": "Added LibAddressArray",
+                "pr": 1383
+            }
+        ]
+    },
+    {
+        "timestamp": 1544741676,
+        "version": "2.1.59",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ]
+    }
+]
