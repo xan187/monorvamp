@@ -1,0 +1,18 @@
+{
+    "artifactsDir": "artifacts",
+    "contractsDir": "contracts",
+    "compilerSettings": {
+        "outputSelection": {
+            "*": {
+                "*": [
+                    "abi",
+                    "devdoc",
+                    "evm.bytecode.object",
+                    "evm.bytecode.sourceMap",
+                    "evm.deployedBytecode.object",
+                    "evm.deployedBytecode.sourceMap"
+                ]
+            }
+        }
+    }
+}
