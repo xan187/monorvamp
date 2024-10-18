@@ -1,0 +1,24 @@
+[
+    {
+        "timestamp": 1573159180,
+        "version": "1.0.1",
+        "changes": [
+            {
+                "note": "Dependencies updated"
+            }
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "changes": [
+            {
+                "note": "Created package",
+                "pr": "2240"
+            },
+            {
+                "note": "Added the deployment manager class",
+                "pr": "2240"
+            }
+        ]
+    }
+]
