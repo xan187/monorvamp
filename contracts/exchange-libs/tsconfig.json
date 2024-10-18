@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": { "outDir": "lib", "rootDir": ".", "resolveJsonModule": true },
+    "include": ["./src/**/*", "./test/**/*", "./scripts/**/*", "./generated-wrappers/**/*"],
+    "files": [
+        "generated-artifacts/LibEIP712ExchangeDomain.json",
+        "generated-artifacts/LibFillResults.json",
+        "generated-artifacts/LibMath.json",
+        "generated-artifacts/LibOrder.json",
+        "generated-artifacts/LibZeroExTransaction.json",
+        "generated-artifacts/TestLibs.json"
+    ],
+    "exclude": ["./deploy/solc/solc_bin"]
+}

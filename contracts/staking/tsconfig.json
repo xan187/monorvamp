@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": { "outDir": "lib", "rootDir": ".", "resolveJsonModule": true },
+    "include": ["./src/**/*", "./test/**/*", "./generated-wrappers/**/*"],
+    "files": [
+        "generated-artifacts/LibFeeMathTest.json",
+        "generated-artifacts/LibZrxToken.json",
+        "generated-artifacts/Staking.json",
+        "generated-artifacts/StakingPoolRewardVault.json",
+        "generated-artifacts/StakingProxy.json",
+        "generated-artifacts/ZrxVault.json"
+    ],
+    "exclude": ["./deploy/solc/solc_bin"]
+}
