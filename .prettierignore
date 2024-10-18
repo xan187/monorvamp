@@ -1,0 +1,4 @@
+lib
+.nyc_output
+/packages/contracts/src/artifacts
+package.json
