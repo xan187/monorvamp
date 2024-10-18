@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "name": "0x-monorepo",
+    "workspaces": [
+        "packages/*",
+        "contracts/*"
+    ],
+    "scripts": {
+        "compile": "wsrun compile @0x/contracts-multisig"
+    },
+    "devDependencies": {
+        "wsrun": "^2.2.0"
+    }
+}

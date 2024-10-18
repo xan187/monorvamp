@@ -1,0 +1,10 @@
+{
+    "name": "@0x/contracts-multisig",
+    "version": "1.0.6",
+    "scripts": {
+        "compile": "sol-compiler"
+    },
+    "devDependencies": {
+        "@0x/sol-compiler": "^2.0.2"
+    }
+}

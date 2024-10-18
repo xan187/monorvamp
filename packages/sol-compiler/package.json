@@ -1,0 +1,8 @@
+{
+    "name": "@0x/sol-compiler",
+    "version": "2.0.2",
+    "main": "index.js",
+    "bin": {
+        "sol-compiler": "index.js"
+    }
+}
