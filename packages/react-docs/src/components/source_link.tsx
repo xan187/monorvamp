@@ -1,0 +1,21 @@
+import { colors } from '@0xproject/react-shared';
+import { Source } from '@0xproject/types';
+import * as React from 'react';
+
+export interface SourceLinkProps {
+    source: Source;
+    sourceUrl: string;
+    version: string;
+}
+
+export const SourceLink = (props: SourceLinkProps) => {
+    const src = props.source;
+    const sourceCodeUrl = `${props.sourceUrl}/${src.fileName}#L${src.line}`;
+    return (
+        <div className="pt2" style={{ fontSize: 14 }}>
+            <a href={sourceCodeUrl} target="_blank" className="underline" style={{ color: colors.grey }}>
+                Source
+            </a>
+        </div>
+    );
+};
