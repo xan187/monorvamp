@@ -1,0 +1,30 @@
+{
+    "artifactsDir": "generated-artifacts",
+    "contractsDir": "contracts",
+    "useDockerisedSolc": false,
+    "isOfflineMode": true,
+    "compilerSettings": {
+        "evmVersion": "constantinople",
+        "optimizer": { "enabled": true, "runs": 1000000 },
+        "outputSelection": {
+            "*": {
+                "*": [
+                    "abi",
+                    "evm.bytecode.object",
+                    "evm.bytecode.sourceMap",
+                    "evm.deployedBytecode.object",
+                    "evm.deployedBytecode.sourceMap"
+                ]
+            }
+        }
+    },
+    "contracts": [
+        "src/Staking.sol",
+        "src/StakingProxy.sol",
+        "src/core/MixinStake.sol",
+        "src/libs/LibZrxToken.sol",
+        "src/vaults/RewardVault.sol",
+        "src/vaults/ZrxVault.sol",
+        "test/LibFeeMathTest.sol"
+    ]
+}
