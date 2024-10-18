@@ -1,0 +1,75 @@
+[
+    {
+        "version": "1.0.0-beta.0",
+        "changes": [
+            {
+                "note": "Created package",
+                "pr": 1821
+            },
+            {
+                "note": "First implementation",
+                "pr": 1910
+            },
+            {
+                "note": "Replace `LibFeeMath` with `LibFixedMath`.",
+                "pr": 2109
+            },
+            {
+                "note": "Use a more precise cobb-douglas implementation.",
+                "pr": 2109
+            },
+            {
+                "note": "Change the way operator stake is computed.",
+                "pr": 2109
+            },
+            {
+                "note": "Denominate pool operator shares in parts-per-million.",
+                "pr": 2109
+            },
+            {
+                "note": "New stake management mechanics. Delay before delegation. Nixed shadow rewards.",
+                "pr": 2118
+            },
+            {
+                "note": "Tests for new stake management mechanics.",
+                "pr": 2126
+            },
+            {
+                "note": "Add `init()` pattern to contracts.",
+                "pr": 2131
+            },
+            {
+                "note": "Replace `MixinDeploymentConstants` with `MixinParams`.",
+                "pr": 2131
+            },
+            {
+                "note": "Reference counting for cumulative rewards.",
+                "pr": 2154
+            },
+            {
+                "note": "Refactored Staking Reward Vault. Moved pool management logic into staking contract.",
+                "pr": 2156
+            },
+            {
+                "note": "Removed MixinStakingPoolRewardVault.sol",
+                "pr": 2156
+            },
+            {
+                "note": "Refactored out `_cobbDouglas()` into its own library",
+                "pr": 2179
+            },
+            {
+                "note": "Introduce multi-block finalization.",
+                "pr": 2155
+            },
+            {
+                "note": "Removed reference counting for cumulative rewards.",
+                "pr": 2188
+            },
+            {
+                "note": "Removed explicit dependency on epoch+1 when delegating.",
+                "pr": 2188
+            }
+        ]
+    }
+]
