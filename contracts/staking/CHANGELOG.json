@@ -1,0 +1,31 @@
+[
+    {
+        "version": "1.0.0",
+        "changes": [
+            {
+                "note": "Created package",
+                "pr": 1821
+            },
+            {
+                "note": "First implementation",
+                "pr": 1910
+            },
+            {
+                "note": "Replace `LibFeeMath` with `LibFixedMath`.",
+                "pr": 2109
+            },
+            {
+                "note": "Use a more precise cobb-douglas implementation.",
+                "pr": 2109
+            },
+            {
+                "note": "Change the way operator stake is computed.",
+                "pr": 2109
+            },
+            {
+                "note": "Denominate pool operator shares in parts-per-million.",
+                "pr": 2109
+            }
+        ]
+    }
+]
