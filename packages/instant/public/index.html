@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>0x Instant Dev Environment</title>
+    <script type="text/javascript" src="/main.bundle.js" charset="utf-8"></script>
+    <style>
+        #zeroExInstantContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zeroExInstantContainer"></div>
+    <script>
+        zeroExInstant.render({
+            liquiditySource: 'https://api.radarrelay.com/0x/v2/',
+            assetData: '0xf47261b0000000000000000000000000e41d2489571d322189246dafa5ebde1f4699f498',
+        });
+    </script>
+</body>
+
+</html>
