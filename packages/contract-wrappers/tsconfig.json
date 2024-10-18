@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "outDir": "lib",
+        "rootDir": ".",
+        "resolveJsonModule": true,
+        "traceResolution": true
+    },
+    "include": ["./src/**/*", "./test/**/*"],
+    "exclude": ["node_modules"],
+    "files": [ "./test/fixtures/dYdX/artifacts/ZeroExV2CoordinatorMultiOrderExchangeWrapper.json" ]
+}
